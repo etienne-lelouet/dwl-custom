@@ -189,12 +189,12 @@ static const Key keys[] = {
     TAGKEYS(XKB_KEY_ampersand, XKB_KEY_1, 0),
     TAGKEYS(XKB_KEY_eacute, XKB_KEY_2, 1),
     TAGKEYS(XKB_KEY_quotedbl, XKB_KEY_3, 2),
-    TAGKEYS(XKB_KEY_dollar, XKB_KEY_4, 3),
-    TAGKEYS(XKB_KEY_apostrophe, XKB_KEY_5, 4),
-    TAGKEYS(XKB_KEY_parenleft, XKB_KEY_6, 5),
-    TAGKEYS(XKB_KEY_minus, XKB_KEY_7, 6),
-    TAGKEYS(XKB_KEY_egrave, XKB_KEY_8, 7),
-    TAGKEYS(XKB_KEY_underscore, XKB_KEY_9, 8),
+    TAGKEYS(XKB_KEY_apostrophe, XKB_KEY_4, 3),
+    TAGKEYS(XKB_KEY_parenleft, XKB_KEY_5, 4),
+    TAGKEYS(XKB_KEY_minus, XKB_KEY_6, 5),
+    TAGKEYS(XKB_KEY_egrave, XKB_KEY_7, 6),
+    TAGKEYS(XKB_KEY_underscore, XKB_KEY_8, 7),
+    TAGKEYS(XKB_KEY_ccedilla, XKB_KEY_9, 8),
     {MODKEY | WLR_MODIFIER_SHIFT, XKB_KEY_Q, quit, {0}},
 
     /* Custom shortcuts */
