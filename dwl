@@ -1,13 +1,11 @@
-#!/bin/sh
-true>/tmp/dwl_logs
-exec >> /tmp/dwl_logs
+#!/bin/bash
+true>"$HOME/.dwl_startup_script_log"
+exec >> "$HOME/.dwl_startup_script_log"
 exec 2>&1
 
-. ~/.profile
+source ~/.profile
 
-if [ -z "$XDG_SESSION_TYPE" ];
-then
-    export XDG_SESSION_TYPE="wayland"
-fi
+echo "running ssh-agent"
+eval $(ssh-agent)
 
-dwl.exe -s "$HOME/.xsessionrc <&-"
+dwl.exe -s "$HOME/.wayland_startup_script_post <&-"
