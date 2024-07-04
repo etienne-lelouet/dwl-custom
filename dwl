@@ -8,4 +8,6 @@ source ~/.profile
 echo "running ssh-agent"
 eval $(ssh-agent)
 
+export MOZ_ENABLE_WAYLAND=1
+
 dwl.exe -s "$HOME/.wayland_startup_script_post <&-"
