@@ -10,4 +10,4 @@ eval $(ssh-agent)
 
 export MOZ_ENABLE_WAYLAND=1
 
-dwl.exe -s "$HOME/.wayland_startup_script_post <&-"
+dwl.exe -s "$HOME/.wayland_startup_script_post <&-" > "$HOME/.dwl_output.log" 2>&1
