@@ -68,7 +68,7 @@ static const struct xkb_rule_names xkb_rules = {
   .model = "pc105",
   .layout = "fr,gb",
   .variant = "azerty",
-  .options = "compose:menu,lv3:ralt_switch,ctrl:swapcaps_hyper",
+  .options = "compose:menu,lv3:ralt_switch,ctrl:swapcaps_hyper,grp:rctrl_rshift_toggle",
 };
 
 static const int repeat_rate = 25;
@@ -204,6 +204,9 @@ static const Key keys[] = {
     {0, XKB_KEY_XF86AudioLowerVolume, spawn, {.v = voldowncmd}},
     {0, XKB_KEY_XF86AudioRaiseVolume, spawn, {.v = volupcmd}},
     {0, XKB_KEY_XF86AudioPlay, spawn, {.v = changesinkcmd}},
+    {0, XKB_KEY_Print, capturecurwin, {0}},
+    {MODKEY, XKB_KEY_Print, capturecurscreen, {0}},
+    {WLR_MODIFIER_SHIFT, XKB_KEY_Print, capturegeom, {0}},
     /* Ctrl-Alt-Backspace and Ctrl-Alt-Fx used to be handled by X server */
     {WLR_MODIFIER_CTRL | WLR_MODIFIER_ALT, XKB_KEY_Terminate_Server, quit, {0}},
 /* Ctrl-Alt-Fx is used to switch to another VT, if you don't know what a VT is
